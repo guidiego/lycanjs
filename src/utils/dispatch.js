@@ -1,4 +1,4 @@
-import { Dispatcher } from "flux"
+import Dispatcher from "flux/lib/Dispatcher"
 import Middleware from '../middleware';
 
 class AppDispatcher extends Dispatcher {
