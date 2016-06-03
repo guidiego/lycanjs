@@ -7,6 +7,9 @@ npm-debug.log*
 # Local example
 example
 
+# remove build
+index.js
+
 # Runtime data
 pids
 *.pid
