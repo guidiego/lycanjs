@@ -2,7 +2,7 @@ import Store from '../src/store';
 import { expect } from 'chai';
 
 describe('Store', () => {
-    let storeConfig, storeInstance;
+    let storeConfig;
     
     beforeEach(() => {
         storeConfig = {
@@ -13,8 +13,6 @@ describe('Store', () => {
                 setTest: (test) => this.state.test = test
             }
         }
-        
-        storeInstance = new StoreModel(storeConfig);
     });
     
     it('should register a store', () => {
