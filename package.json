@@ -1,0 +1,41 @@
+{
+  "name": "lycanjs",
+  "version": "1.0.0",
+  "description": "A framework to bind Store/Action attributes and methods on React Components",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/_mocha --compilers js:babel-core/register --colors --bail --reporter spec test/",
+    "test:cov": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --colors --reporter dot test/",
+    "test:travis": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-core/register --colors --reporter spec test/",
+    "clean": "rm -rf node_modules coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guidiego/lycanjs.git"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "javascript"
+  ],
+  "author": "Guilherme Diego <guidiego.expgames@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guidiego/lycanjs/issues"
+  },
+  "homepage": "https://github.com/guidiego/lycanjs#readme",
+  "dependencies": {
+    "flux": "^2.1.1",
+    "react": "^15.1.0",
+    "request-promise": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
+  }
+}
