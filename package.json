@@ -4,10 +4,9 @@
   "description": "A framework to bind Store/Action attributes and methods on React Components",
   "main": "src/main.js",
   "scripts": {
-    "test": "node node_modules/mocha/bin/_mocha --compilers js:babel-core/register --colors --bail --reporter spec test/",
-    "test:cov": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --colors --reporter dot test/",
-    "test:travis": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-core/register --colors --reporter spec test/",
-    "clean": "rm -rf node_modules coverage"
+    "test": "node node_modules/mocha/bin/_mocha --compilers js:babel-core/register --colors --bail --reporter spec test/**/*",
+    "test:cov": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --colors --reporter dot test/**/*",
+    "test:travis": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha --report lcovonly -- --compilers js:babel-core/register --colors --reporter spec test/**/*"
   },
   "repository": {
     "type": "git",
