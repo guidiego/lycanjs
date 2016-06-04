@@ -2,15 +2,15 @@ import {Component} from 'react';
 import Store from './store.js';
 import Action from './action.js';
 
-export const SeveroComponent = (bind) => {
+export const SeveroConnector = (bind) => {
     let store = Store.get(bind);
     let action = Action.get(bind);
     
-    class LycanComponent extends Component {
+    class SeveroComponent extends Component {
         constructor(props) {
             super(props);
-            this.state = store.toState();
-            this.attachMethods(action);
+            this.state = store.getState();
+            this.__attachMethods(action);
             
             store.onStateChange(() => {
                 this.setState(store.toState())
@@ -22,7 +22,7 @@ export const SeveroComponent = (bind) => {
         }
     }
     
-    return LycanComponent;
+    return SeveroComponent();
 }
 
-export default SeveroComponent;
+export default SeveroConnector;
