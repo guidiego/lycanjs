@@ -1,5 +1,5 @@
 import parseToCammelCase from './parseToCammelCase';
-import Dispatcher from './dispatch';
+import Dispatcher from './dispatcher';
 import EventEmmiter from 'events';
 
 class StoreModel extends EventEmmiter {
