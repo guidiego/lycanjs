@@ -5,23 +5,22 @@ import EventEmmiter from 'events';
 class StoreModel extends EventEmmiter {
     constructor(store) {
         super();
-        this.__state = store.state;
-        this.__methods = store.methods;
+        this.meta = store;
 
-        this.dispatchToken = Dispatcher.register(this.__mapDispatchActions);
+        this.dispatchToken = Dispatcher.register((action) => this.__mapDispatchActions(action));
     }
     
     getState() {
-        return this.__state;
+        return this.meta.state;
     }
     
     __mapDispatchActions(action) {
-        this.__methods[parseToCammelCase(action.type)](action);
-        this.emit('LYCAN_STATE_CHANGE');
+        this.meta[parseToCammelCase(action.type)](action);
+        this.emit('SEVERO_STATE_CHANGE');
     }
     
     onStateChange(callback) {
-        this.on('LYCAN_STATE_CHANGE', callback)
+        this.on('SEVERO_STATE_CHANGE', callback)
     }
 }
 

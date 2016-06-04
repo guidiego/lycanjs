@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import { Component } from 'react';
 import Store from './store.js';
 import Action from './action.js';
 
@@ -13,7 +13,7 @@ export const SeveroConnector = (bind) => {
             this.__attachMethods(action);
             
             store.onStateChange(() => {
-                this.setState(store.toState())
+                this.setState(store.getState())
             })
         }
         
