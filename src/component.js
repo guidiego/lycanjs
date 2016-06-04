@@ -6,7 +6,7 @@ export const SeveroConnector = (bind) => {
     let store = Store.get(bind);
     let action = Action.get(bind);
     
-    class SeveroComponent extends Component {
+    return class SeveroComponent extends Component {
         constructor(props) {
             super(props);
             this.state = store.getState();
@@ -21,8 +21,6 @@ export const SeveroConnector = (bind) => {
             Object.keys(methods).forEach(key => this[key] = methods[key]);
         }
     }
-    
-    return SeveroComponent();
 }
 
 export default SeveroConnector;
