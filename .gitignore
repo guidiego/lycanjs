@@ -4,8 +4,9 @@ logs
 npm-debug.log*
 
 
-# Local example
-example
+# Remove
+index.js
+bin
 
 # Runtime data
 pids
