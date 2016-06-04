@@ -1,6 +1,6 @@
 {
   "name": "severo",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A framework to bind Store/Action attributes and methods on React Components",
   "main": "bin/main.js",
   "scripts": {
