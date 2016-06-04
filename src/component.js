@@ -1,6 +1,8 @@
 import {Component} from 'react';
+import Store from './store.js';
+import Action from './action.js';
 
-const LycanComponent = (bind) => {
+export const SeveroComponent = (bind) => {
     let store = Store.get(bind);
     let action = Action.get(bind);
     
@@ -22,3 +24,5 @@ const LycanComponent = (bind) => {
     
     return LycanComponent;
 }
+
+export default SeveroComponent;
