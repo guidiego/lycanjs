@@ -1,13 +1,5 @@
-import Dispatcher from "flux/lib/Dispatcher"
-import Middleware from '../middleware';
+import Dispatcher from './dispatcher';
 
-class AppDispatcher extends Dispatcher {
-    dispatch(payload) {
-        let mids = Middleware.getAll();
-        
-        if (mids.length > 0) Middlewares.execAll(payload)
-        super.dispatch(payload);
-    }
-}
+export const Dispatch = (type, data) => Dispatcher.dispatch({type, ...data});
 
-export default new AppDispatcher();
+export default Dispatch;
