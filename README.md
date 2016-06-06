@@ -1,5 +1,6 @@
 # Severo
-A framework that bind easily your Flux Action/Store inside your React Component.
+A framework to make your Flux + React interations easier than a plot twist!  
+![Imgur](http://i.imgur.com/htYxR8P.gif)  
 
 ## Installing
 
