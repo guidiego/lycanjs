@@ -3,25 +3,33 @@ A framework that bind easily your Flux Action/Store inside your React Component.
 
 ## Installing
 
-First of all get that for your package.json
+You can download Severo by NPM <3  
 `npm install --save-dev severo`
 
 ## Understanding Severo
 
 #### The Ideia
-Severo was create to make easily you reuse the same Store Data / Action Dispatchs inside React components, so the mainly ideia is `little thing to do little things` something like a minimalist pattern or single responsability didatic.
+Severo was created to get the `flux` flow easy, first of all was reduced some things to incentivize you to programming `little things to do little things`, forget the *compomonsters*! Another thing is turn the flow more explicit.
 
 #### The Way
-So we will have a Store and a Action linked by their names, after that we have a Severo Component that bind this Store/Action inside our component to give us access to our logic.
+Using EventEmmiter from node, we create a Reactive Store to work with Immutable States by Reactions. The flow it`s easy: All actions have a reaction, the reaction change the state finally the state changes your component. Severo works like that:  
 
-#### Can You Forget setState?
-Severo working with a abstract State, yeah you listening write! You will declare you state and the methods that change that inside your store. Forget create functions and more functions inside Class Components to change state, now you will call actions to make that for you!
+![Imgur](http://i.imgur.com/XKMTOQ3.png)  
 
-#### The Flux Flow inside Severo Flow
-The flux flow it's easy to describe `component -> action -> store -> component`, severo work exactily equal. We have Actions to Dispatch our Store Methods, and we Bind our Component to them to make easy gave a `this.increase()` or something like that.
+But in real mode you only see that:  
 
-## A toy with battery?
-Yeah! We gave you a toy with battery! We have some wrap methods to make your life easy, like `Request` and `Dispatch`
+![Imgur](http://i.imgur.com/9lCHPCh.png)
+
+
+#### setState only for 'no complex' components!
+A input that need a onChange value? ABSTRACT THAT!  
+A button that need a internal load? ABSTRACT THAT!  
+We use react, so ABSTRACT EVERYTHING!
+
+By default `Connectors` are responsible for components states, so if you need to change that you need to call a Action! 
+
+"But I don`t need call an action for a little thing just that!"
+"So, ABSTRACT THAT!"
 
 ## I'm in!
 If you like the ideia, support us with a `star`, `feedback`, `issues`, `discussions` and `pull requests` <3
