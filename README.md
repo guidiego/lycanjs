@@ -1,4 +1,4 @@
-# Severo
+# Severus
 A framework to make your Flux + React interations easier than a plot twist!  
 
 ![Imgur](http://i.imgur.com/htYxR8P.gif)  
@@ -6,12 +6,12 @@ A framework to make your Flux + React interations easier than a plot twist!
 ## Installing
 
 You can download Severo by NPM <3  
-`npm install --save-dev severo`
+`npm install --save-dev severus`
 
-## Understanding Severo
+## Understanding Severus
 
 #### The Ideia
-Severo was created to get the `flux` flow easy, first of all was reduced some things to incentivize you to programming `little things to do little things`, forget the *compomonsters*! Another thing is turn the flow more explicit.
+Severus was created to get the `flux` flow easy, first of all was reduced some things to incentivize you to programming `little things to do little things`, forget the *compomonsters*! Another thing is turn the flow more explicit.
 
 #### The Way
 Using EventEmmiter from node, we create a Reactive Store to work with Immutable States by Reactions. The flow it`s easy: All actions have a reaction, the reaction change the state finally the state changes your component. Severo works like that:  
@@ -34,7 +34,7 @@ By default `Connectors` are responsible for components states, so if you need to
 "So, ABSTRACT THAT!"
 
 ## Examples
-https://github.com/guidiego/severo-examples
+https://github.com/guidiego/severus-examples
 
 ## I'm in!
 If you like the ideia, support us with a `star`, `feedback`, `issues`, `discussions` and `pull requests` <3
