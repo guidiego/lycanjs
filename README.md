@@ -1,5 +1,6 @@
 # Severo
 A framework to make your Flux + React interations easier than a plot twist!  
+
 ![Imgur](http://i.imgur.com/htYxR8P.gif)  
 
 ## Installing
@@ -31,6 +32,9 @@ By default `Connectors` are responsible for components states, so if you need to
 
 "But I don`t need call an action for a little thing just that!"
 "So, ABSTRACT THAT!"
+
+## Examples
+https://github.com/guidiego/severo-examples
 
 ## I'm in!
 If you like the ideia, support us with a `star`, `feedback`, `issues`, `discussions` and `pull requests` <3
