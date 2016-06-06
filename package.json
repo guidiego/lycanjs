@@ -1,8 +1,8 @@
 {
-  "name": "severo",
-  "version": "1.2.0",
+  "name": "severus",
+  "version": "1.0.1",
   "description": "A framework to bind Store/Action attributes and methods on React Components",
-  "main": "bin/main.js",
+  "main": "bin/Main.js",
   "scripts": {
     "build": "node node_modules/babel-cli/bin/babel src --out-dir bin",
     "prepublish": "npm run build",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guidiego/lycanjs.git"
+    "url": "git+https://github.com/guidiego/severus.git"
   },
   "bin": [
     "bin"
@@ -25,9 +25,9 @@
   "author": "Guilherme Diego <guidiego.expgames@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guidiego/lycanjs/issues"
+    "url": "https://github.com/guidiego/severus/issues"
   },
-  "homepage": "https://github.com/guidiego/lycanjs#readme",
+  "homepage": "https://github.com/guidiego/severus#readme",
   "dependencies": {
     "flux": "^2.1.1",
     "immutable": "^3.8.1",

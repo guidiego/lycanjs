@@ -29,8 +29,11 @@ class Store extends EventEmmiter {
         let reaction = parseToCammelCase(action.type);
         
         if (this.haveReaction(reaction)) {
-            this.state = this.reactions[reaction](this.state, action);
-            this.emit(this.dispatchName);   
+            let nextState = this.reactions[reaction](this.state, action);
+            if (!this.state.equals(nextState)) {
+                this.state = nextState;
+                this.emit(this.dispatchName);   
+            }
         }
     }
 }
