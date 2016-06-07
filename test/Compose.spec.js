@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Model, Connector } from '../src/Main';
+import { List } from 'immutable';
+import { Model, Compose } from '../src/Main';
 import { expect } from 'chai';
 
 const reactions = {
@@ -8,19 +9,26 @@ const reactions = {
     decrease: (state) => state.set('count', state.get('count') + -1)
 }
 
+const reactions2 = {
+    addTask: (state, {value}) => state.get('tasks').push(value)
+}
+
 const state = { count: 0 };
+const state2 = { tasks: [] };
 
 Model.register('counter', state, reactions);
+Model.register('task', state2, reactions2);
 
-class TestComponent extends Connector('counter') {
+class TestComponent extends Compose('counter', 'task') {
     constructor(props) {
         super(props);
     }
 }
 
-describe('Connector', () => {
+describe('Compose', () => {
     it('should put state into component', () => {
         const instance = new TestComponent();
-        expect(instance.state).to.deep.equal(state);
+        const mergeState = Object.assign(state, state2);
+        expect(instance.state).to.deep.equal(mergeState);
     })
 })
