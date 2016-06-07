@@ -1,6 +1,6 @@
 {
   "name": "severus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A framework to bind Store/Action attributes and methods on React Components",
   "main": "bin/Main.js",
   "scripts": {
