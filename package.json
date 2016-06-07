@@ -1,6 +1,6 @@
 {
   "name": "severus",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "A framework to make your Flux + React interations easier than a plot twist!",
   "main": "bin/Main.js",
   "scripts": {
@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/guidiego/severus#readme",
   "dependencies": {
+    "cls-bluebird": "^1.0.1",
+    "continuation-local-storage": "^3.1.7",
     "flux": "^2.1.1",
     "immutable": "^3.8.1",
     "react": "^15.1.0",
